@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types"
-           xmlns:iBtnT="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types"
->
-    <xs:complexType name="commonAttr">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types"
+    xmlns:iBtnT="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types">
+    <xs:simpleType name="string4096Type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\n|\S*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:attributeGroup name="commonAttr">
         <xs:attribute name="text" type="xs:string"/>
         <xs:attribute name="name" type="xs:string"/>
-    </xs:complexType>
+    </xs:attributeGroup>
     <xs:complexType name="simpleInlineButton">
         <xs:simpleContent>
-            <xs:extension base="iBtnT:commonAttr">
-                <xs:attribute name="onclick" type="xs:string"/>
+            <xs:extension base="iBtnT:string4096Type">
+                <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
+                <xs:attribute name="onclick" type="xs:string"></xs:attribute>
             </xs:extension>
         </xs:simpleContent>
+       
     </xs:complexType>
     <xs:complexType name="urlButton">
         <xs:simpleContent>
-            <xs:extension base="iBtnT:commonAttr">
-                <xs:attribute name="href" type="xs:anyURI"/>
+            <xs:extension base="iBtnT:string4096Type">
+                <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
+                <xs:attribute name="href" type="xs:anyURI" use="required"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
     <xs:complexType name="loginUrlButton">
         <xs:simpleContent>
-            <xs:extension base="iBtnT:commonAttr">
+            <xs:extension base="iBtnT:string4096Type">
+                <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
                 <xs:attribute name="url" type="xs:anyURI"/>
                 <xs:attribute name="forwardText" type="xs:string"/>
                 <xs:attribute name="botUserName" type="xs:string"/>
@@ -32,27 +41,31 @@
     </xs:complexType>
     <xs:complexType name="switchInlineQueryButton">
         <xs:simpleContent>
-            <xs:extension base="iBtnT:commonAttr">
+            <xs:extension base="iBtnT:string4096Type">
+                <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
                 <xs:attribute name="switchInlineQuery" type="xs:boolean"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
     <xs:complexType name="switchInlineQueryCurrentChatButton">
         <xs:simpleContent>
-            <xs:extension base="iBtnT:commonAttr">
+            <xs:extension base="iBtnT:string4096Type">
+                <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
                 <xs:attribute name="switchInlineQueryCurrentChatButton" type="xs:boolean"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
     <xs:complexType name="gameButton">
         <xs:simpleContent>
-            <xs:extension base="iBtnT:commonAttr">
+            <xs:extension base="iBtnT:string4096Type">
+                <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
     <xs:complexType name="payButton">
         <xs:simpleContent>
-            <xs:extension base="iBtnT:commonAttr">
+            <xs:extension base="iBtnT:string4096Type">
+                <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
                 <xs:attribute name="pay" type="xs:boolean"/>
             </xs:extension>
         </xs:simpleContent>
