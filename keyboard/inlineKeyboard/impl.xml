@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inlineKeyboard xmlns="http://teledom.com/keyboard/inlineKeyboard"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://teledom.com/keyboard/inlineKeyboard inlineKeyboard.xsd"
+    xmlns:ikb="http://teledom.com/keyboard/inlineButtons"
+    >
+    <ikb:simpleCallbackButton onclick="Remote::turnRelayOn(1)">
+        Кнопка 1
+    </ikb:simpleCallbackButton>
+    
+</inlineKeyboard>

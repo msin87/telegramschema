@@ -4,7 +4,9 @@
     xmlns:iBtnT="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types">
     <xs:simpleType name="string4096Type">
         <xs:restriction base="xs:string">
-            <xs:pattern value="\n|\S*"></xs:pattern>
+            <xs:whiteSpace value="collapse"></xs:whiteSpace>
+            <xs:minLength value="1"></xs:minLength>
+            <xs:maxLength value="4096"></xs:maxLength>
         </xs:restriction>
     </xs:simpleType>
     <xs:attributeGroup name="commonAttr">
@@ -15,7 +17,7 @@
         <xs:simpleContent>
             <xs:extension base="iBtnT:string4096Type">
                 <xs:attributeGroup ref="iBtnT:commonAttr"></xs:attributeGroup>
-                <xs:attribute name="onclick" type="xs:string"></xs:attribute>
+                <xs:attribute name="onclick" type="xs:string" use="required"/>
             </xs:extension>
         </xs:simpleContent>
        

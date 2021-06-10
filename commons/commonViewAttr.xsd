@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cvAttr="http://teledom.com/elements/commonViewAttr"
-    targetNamespace="http://teledom.com/elements/commonViewAttr" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cvAttr="http://teledom.com/commons/commonViewAttr"
+    targetNamespace="http://teledom.com/commons/commonViewAttr" elementFormDefault="qualified">
     <xs:complexType name="commonViewAttr">
         <xs:attribute name="id" type="xs:string"/>
         <xs:attribute name="name" type="xs:string" use="required" />

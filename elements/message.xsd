@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:msg="http://teledom.com/elements/message"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:cvAttr="http://teledom.com/elements/commonViewAttr"
+    xmlns:cvAttr="http://teledom.com/commons/commonViewAttr"
     xmlns:iKbd="http://teledom.com/keyboard/inlineKeyboard"
     targetNamespace="http://teledom.com/elements/message" elementFormDefault="qualified"
     vc:minVersion="1.0" vc:maxVersion="1.1">
-    <xs:import schemaLocation="commonViewAttr.xsd" namespace="http://teledom.com/elements/commonViewAttr"/>
+    <xs:import schemaLocation="../commons/commonViewAttr.xsd" namespace="http://teledom.com/commons/commonViewAttr"/>
     <xs:import schemaLocation="../keyboard/inlineKeyboard/inlineKeyboard.xsd" namespace="http://teledom.com/keyboard/inlineKeyboard"/>
     <xs:element name="message">
         <xs:complexType xml:base="commonViewAttr.xsd">
