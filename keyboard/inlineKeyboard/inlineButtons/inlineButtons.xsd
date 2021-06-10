@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://teledom.com/keyboard/inlineButtons"
+           xmlns:iBtnT="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types"
+>
+    <xs:import namespace="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types" schemaLocation="types/inlineButtonsTypes.xsd"></xs:import>
+    <xs:element name="simpleCallbackButton" type="iBtnT:simpleInlineButton"/>
+    <xs:element name="urlButton" type="iBtnT:urlButton"/>
+    <xs:element name="loginUrlButton" type="iBtnT:loginUrlButton"/>
+    <xs:element name="switchInlineQueryButton" type="iBtnT:switchInlineQueryButton"/>
+    <xs:element name="switchInlineQueryCurrentChatButton" type="iBtnT:switchInlineQueryCurrentChatButton"/>
+    <xs:element name="gameButton" type="iBtnT:gameButton"/>
+    <xs:element name="payButton" type="iBtnT:payButton"/>
+</xs:schema>

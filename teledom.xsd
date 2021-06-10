@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://teledom.com/"
+    xmlns:td="http://teledom.com/" 
+    xmlns:iKb="http://teledom.com/keyboard/inlineKeyboard"
+    xmlns:bKb="http://teledom.com/keyboard/bottomKeyboard"
+    xmlns:msg="http://teledom.com/elements/message"
+    >
+    <xs:import namespace="http://teledom.com/keyboard/inlineKeyboard" schemaLocation="keyboard/inlineKeyboard/inlineKeyboard.xsd"/>
+    <xs:import namespace="http://teledom.com/keyboard/bottomKeyboard" schemaLocation="keyboard/bottomKeyboard/bottomKeyboard.xsd"/>
+    <xs:import namespace="http://teledom.com/keyboard/bottomKeyboard" schemaLocation="keyboard/bottomKeyboard/bottomKeyboard.xsd"/>
+    <xs:import namespace="http://teledom.com/elements/message" schemaLocation="elements/message.xsd"/>
+    <xs:attribute name="id" type="xs:positiveInteger"></xs:attribute>
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+    <xs:attribute name="pinned">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="none"/>
+                <xs:enumeration value="top"/>
+                <xs:enumeration value="bottom"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="view">
+        <xs:complexType>
+            <xs:all>
+                <xs:element ref="msg:message"/>
+            </xs:all>
+            <xs:attribute ref="td:id"/>
+            <xs:attribute ref="td:name"/>
+            <xs:attribute ref="td:pinned"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

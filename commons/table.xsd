@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://teledom.com/commons/table"
+           xmlns:table="http://teledom.com/commons/table"
+>
+    <xs:complexType name="tr">
+        <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="td">
+                <xs:complexType>
+                    <xs:sequence maxOccurs="1">
+                        <xs:any/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="tr" type="table:tr"/>
+</xs:schema>

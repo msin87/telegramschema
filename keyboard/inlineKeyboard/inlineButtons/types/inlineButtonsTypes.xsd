@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types"
+           xmlns:iBtnT="http://teledom.com/keyboard/inlineKeyboard/inlineButtons/types"
+>
+    <xs:complexType name="commonAttr">
+        <xs:attribute name="text" type="xs:string"/>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="simpleInlineButton">
+        <xs:simpleContent>
+            <xs:extension base="iBtnT:commonAttr">
+                <xs:attribute name="onclick" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="urlButton">
+        <xs:simpleContent>
+            <xs:extension base="iBtnT:commonAttr">
+                <xs:attribute name="href" type="xs:anyURI"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="loginUrlButton">
+        <xs:simpleContent>
+            <xs:extension base="iBtnT:commonAttr">
+                <xs:attribute name="url" type="xs:anyURI"/>
+                <xs:attribute name="forwardText" type="xs:string"/>
+                <xs:attribute name="botUserName" type="xs:string"/>
+                <xs:attribute name="requestWriteAccess" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="switchInlineQueryButton">
+        <xs:simpleContent>
+            <xs:extension base="iBtnT:commonAttr">
+                <xs:attribute name="switchInlineQuery" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="switchInlineQueryCurrentChatButton">
+        <xs:simpleContent>
+            <xs:extension base="iBtnT:commonAttr">
+                <xs:attribute name="switchInlineQueryCurrentChatButton" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="gameButton">
+        <xs:simpleContent>
+            <xs:extension base="iBtnT:commonAttr">
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="payButton">
+        <xs:simpleContent>
+            <xs:extension base="iBtnT:commonAttr">
+                <xs:attribute name="pay" type="xs:boolean"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

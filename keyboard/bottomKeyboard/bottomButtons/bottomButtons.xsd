@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"
+           xmlns:bBtn="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"
+           xmlns:bBtnT="http://teledom.com/keyboard/bottomKeyboard/bottomButtons/types"
+>
+    <xs:import namespace="http://teledom.com/keyboard/bottomKeyboard/bottomButtons/types" schemaLocation="types/bottomButtonsTypes.xsd"></xs:import>
+    <xs:element name="simpleBottomButton" type="bBtnT:simpleBottomButton"/>
+    <xs:element name="requestContactBottomButton" type="bBtnT:simpleBottomButton"/>
+    <xs:element name="requestLocationBottomButton" type="bBtnT:simpleBottomButton"/>
+    <xs:element name="requestPrivateChatPollBottomButton" type="bBtnT:requestPrivateChatPollBottomButton"/>
+
+</xs:schema>

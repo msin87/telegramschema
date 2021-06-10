@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://teledom.com/keyboard/inlineKeyboard"
+    xmlns:td="http://teledom.com/keyboard" 
+    xmlns:iBtn="http://teledom.com/keyboard/inlineButtons"
+    xmlns:table="http://teledom.com/commons/table">
+    <xs:import namespace="http://teledom.com/keyboard/inlineButtons"
+        schemaLocation="inlineButtons/inlineButtons.xsd"/>
+    <xs:import namespace="http://teledom.com/commons/table" schemaLocation="../../commons/table.xsd"/>
+    <xs:element name="inlineKeyboard">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="table">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tr">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="td">
+                                            <xs:complexType>
+                                                <xs:choice>
+                                                    <xs:element ref="iBtn:simpleCallbackButton"/>
+                                                    <xs:element ref="iBtn:urlButton"/>
+                                                    <xs:element ref="iBtn:loginUrlButton"/>
+                                                    <xs:element ref="iBtn:gameButton"/>
+                                                    <xs:element ref="iBtn:switchInlineQueryButton"/>
+                                                    <xs:element ref="iBtn:switchInlineQueryCurrentChatButton"/>
+                                                    <xs:element ref="iBtn:payButton"/>
+                                                </xs:choice>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                    <xs:element ref="iBtn:simpleCallbackButton"/>
+                    <xs:element ref="iBtn:urlButton"/>
+                    <xs:element ref="iBtn:loginUrlButton"/>
+                    <xs:element ref="iBtn:gameButton"/>
+                    <xs:element ref="iBtn:switchInlineQueryButton"/>
+                    <xs:element ref="iBtn:switchInlineQueryCurrentChatButton"/>
+                <xs:element ref="iBtn:payButton"/>
+              </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

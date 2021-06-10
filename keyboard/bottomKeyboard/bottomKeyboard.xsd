@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:bKbd="http://teledom.com/keyboard/bottomKeyboard"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    xmlns:bBtn="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"
+    targetNamespace="http://teledom.com/keyboard/bottomKeyboard" elementFormDefault="qualified"
+    vc:minVersion="1.0" vc:maxVersion="1.1">
+    <xs:import namespace="http://teledom.com/keyboard/bottomKeyboard/bottomButtons" schemaLocation="bottomButtons/bottomButtons.xsd"></xs:import>
+    <xs:element name="bottomKeyboard">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="table">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tr">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="td">
+                                            <xs:complexType>
+                                                <xs:choice>
+                                                    <xs:element ref="bBtn:requestContactBottomButton"/>
+                                                    <xs:element ref="bBtn:requestLocationBottomButton"/>
+                                                    <xs:element ref="bBtn:requestPrivateChatPollBottomButton"/>
+                                                    <xs:element ref="bBtn:simpleBottomButton"/>
+                                                </xs:choice>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="bBtn:requestContactBottomButton"/>
+                <xs:element ref="bBtn:requestLocationBottomButton"/>
+                <xs:element ref="bBtn:requestPrivateChatPollBottomButton"/>
+                <xs:element ref="bBtn:simpleBottomButton"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

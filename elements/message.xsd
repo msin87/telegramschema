@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:msg="http://teledom.com/elements/message"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    xmlns:cvAttr="http://teledom.com/elements/commonViewAttr"
+    xmlns:iKbd="http://teledom.com/keyboard/inlineKeyboard"
+    targetNamespace="http://teledom.com/elements/message" elementFormDefault="qualified"
+    vc:minVersion="1.0" vc:maxVersion="1.1">
+    <xs:import schemaLocation="commonViewAttr.xsd" namespace="http://teledom.com/elements/commonViewAttr"/>
+    <xs:import schemaLocation="../keyboard/inlineKeyboard/inlineKeyboard.xsd" namespace="http://teledom.com/keyboard/inlineKeyboard"/>
+    <xs:element name="message">
+        <xs:complexType xml:base="commonViewAttr.xsd">
+            <xs:sequence>
+                <xs:element ref="iKbd:inlineKeyboard"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="parseMode">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="MarkdownV2"></xs:enumeration>
+                        <xs:enumeration value="HTML"></xs:enumeration>
+                        <xs:enumeration value="Markdown"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="disableWebPagePreview" type="xs:boolean"/>
+            <xs:attribute name="disableNotification" type="xs:boolean"/>
+            <xs:attribute name="allowSendingWithoutReply" type="xs:boolean"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
