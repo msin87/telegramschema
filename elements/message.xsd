@@ -4,14 +4,26 @@
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
     xmlns:cvAttr="http://teledom.com/commons/commonViewAttr"
     xmlns:iKbd="http://teledom.com/keyboard/inlineKeyboard"
+    xmlns:bKbd="http://teledom.com/keyboard/bottomKeyboard"
     targetNamespace="http://teledom.com/elements/message" elementFormDefault="qualified"
     vc:minVersion="1.0" vc:maxVersion="1.1">
     <xs:import schemaLocation="../commons/commonViewAttr.xsd" namespace="http://teledom.com/commons/commonViewAttr"/>
     <xs:import schemaLocation="../keyboard/inlineKeyboard/inlineKeyboard.xsd" namespace="http://teledom.com/keyboard/inlineKeyboard"/>
+    <xs:import schemaLocation="../keyboard/bottomKeyboard/bottomKeyboard.xsd" namespace="http://teledom.com/keyboard/bottomKeyboard"/>
     <xs:element name="message">
         <xs:complexType xml:base="commonViewAttr.xsd">
             <xs:sequence>
-                <xs:element ref="iKbd:inlineKeyboard"></xs:element>
+                    <xs:element name="text">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:whiteSpace value="collapse"></xs:whiteSpace>
+                            <xs:minLength value="1"></xs:minLength>
+                            <xs:maxLength value="4096"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element ref="iKbd:inlineKeyboard" minOccurs="0"></xs:element>
+                <xs:element ref="bKbd:bottomKeyboard" minOccurs="0"></xs:element>
             </xs:sequence>
             <xs:attribute name="parseMode">
                 <xs:simpleType>

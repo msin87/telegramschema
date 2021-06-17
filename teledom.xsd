@@ -25,9 +25,9 @@
 
     <xs:element name="view">
         <xs:complexType>
-            <xs:all>
+            <xs:choice maxOccurs="unbounded">
                 <xs:element ref="msg:message"/>
-            </xs:all>
+            </xs:choice>
             <xs:attribute ref="td:id"/>
             <xs:attribute ref="td:name"/>
             <xs:attribute ref="td:pinned"/>

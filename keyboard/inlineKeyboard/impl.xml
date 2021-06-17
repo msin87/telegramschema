@@ -4,8 +4,20 @@
     xsi:schemaLocation="http://teledom.com/keyboard/inlineKeyboard inlineKeyboard.xsd"
     xmlns:ikb="http://teledom.com/keyboard/inlineButtons"
     >
-    <ikb:simpleCallbackButton onclick="Remote::turnRelayOn(1)">
-        Кнопка 1
-    </ikb:simpleCallbackButton>
-    
+    <table xmlns="" >
+        <tr>
+            <td>
+                <ikb:simpleCallbackButton onclick="asd">asd</ikb:simpleCallbackButton>
+            </td>
+            <td>
+                <ikb:payButton>asd</ikb:payButton>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ikb:payButton>asd</ikb:payButton>
+            </td>
+        </tr>
+    </table>
+    <ikb:payButton>asd</ikb:payButton>
 </inlineKeyboard>

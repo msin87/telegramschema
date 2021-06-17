@@ -5,7 +5,7 @@
            xmlns:bBtnT="http://teledom.com/keyboard/bottomKeyboard/bottomButtons/types"
 >
     <xs:import namespace="http://teledom.com/keyboard/bottomKeyboard/bottomButtons/types" schemaLocation="types/bottomButtonsTypes.xsd"></xs:import>
-    <xs:element name="simpleBottomButton" type="bBtnT:simpleBottomButton"/>
+    <xs:element name="simpleBottomCallbackButton" type="bBtnT:simpleBottomButton"/>
     <xs:element name="requestContactBottomButton" type="bBtnT:simpleBottomButton"/>
     <xs:element name="requestLocationBottomButton" type="bBtnT:simpleBottomButton"/>
     <xs:element name="requestPrivateChatPollBottomButton" type="bBtnT:requestPrivateChatPollBottomButton"/>

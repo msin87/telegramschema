@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<v:view xmlns:v="http://teledom.com/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://teledom.com/ teledom.xsd"
+    v:name="MainView"
+    v:pinned="bottom"
+    >
+    <message xmlns="http://teledom.com/elements/message" parseMode="HTML">
+        <text>asd</text>
+        <inlineKeyboard xmlns="http://teledom.com/keyboard/inlineKeyboard">
+            <table xmlns="">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </inlineKeyboard>
+        <bottomKeyboard xmlns="http://teledom.com/keyboard/bottomKeyboard">
+            <requestContactBottomButton xmlns="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"></requestContactBottomButton>
+            <requestLocationBottomButton xmlns="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"></requestLocationBottomButton>
+            <requestPrivateChatPollBottomButton xmlns="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"></requestPrivateChatPollBottomButton>
+            <simpleBottomCallbackButton xmlns="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"></simpleBottomCallbackButton>
+        </bottomKeyboard>
+    </message>
+</v:view>

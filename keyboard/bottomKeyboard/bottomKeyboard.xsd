@@ -5,23 +5,24 @@
     xmlns:bBtn="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"
     targetNamespace="http://teledom.com/keyboard/bottomKeyboard" elementFormDefault="qualified"
     vc:minVersion="1.0" vc:maxVersion="1.1">
-    <xs:import namespace="http://teledom.com/keyboard/bottomKeyboard/bottomButtons" schemaLocation="bottomButtons/bottomButtons.xsd"></xs:import>
+    <xs:import namespace="http://teledom.com/keyboard/bottomKeyboard/bottomButtons"
+        schemaLocation="bottomButtons/bottomButtons.xsd"/>
     <xs:element name="bottomKeyboard">
         <xs:complexType>
-            <xs:choice>
-                <xs:element name="table">
+            <xs:all>
+                <xs:element name="table" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="tr">
+                            <xs:element name="tr" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:sequence>
+                                    <xs:sequence maxOccurs="unbounded">
                                         <xs:element name="td">
                                             <xs:complexType>
                                                 <xs:choice>
-                                                    <xs:element ref="bBtn:requestContactBottomButton"/>
-                                                    <xs:element ref="bBtn:requestLocationBottomButton"/>
-                                                    <xs:element ref="bBtn:requestPrivateChatPollBottomButton"/>
-                                                    <xs:element ref="bBtn:simpleBottomButton"/>
+                                                  <xs:element ref="bBtn:requestContactBottomButton"/>
+                                                  <xs:element ref="bBtn:requestLocationBottomButton"/>
+                                                  <xs:element ref="bBtn:requestPrivateChatPollBottomButton"/>
+                                                  <xs:element ref="bBtn:simpleBottomCallbackButton"/>
                                                 </xs:choice>
                                             </xs:complexType>
                                         </xs:element>
@@ -34,8 +35,8 @@
                 <xs:element ref="bBtn:requestContactBottomButton"/>
                 <xs:element ref="bBtn:requestLocationBottomButton"/>
                 <xs:element ref="bBtn:requestPrivateChatPollBottomButton"/>
-                <xs:element ref="bBtn:simpleBottomButton"/>
-            </xs:choice>
+                <xs:element ref="bBtn:simpleBottomCallbackButton"/>
+            </xs:all>
         </xs:complexType>
     </xs:element>
 </xs:schema>
